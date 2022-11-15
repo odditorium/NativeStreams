@@ -1,2 +1,2 @@
 # NativeStreams
-A native iptv client with over 600+ channels and a lot more.
+A native iptv client with over 6000+ channels and a lot more.
