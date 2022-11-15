@@ -1,159 +1,35 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-    <meta charset="utf-8">
-    <title>NativeStreams</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index.js"></script>
+  <meta charset="UTF-8">
+  <title>NativeStreams || Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
 </head>
-<style>
-    body {
-        background-image: url("images/bg.jpg");
-        overflow-x: hidden;
-    }
-    
-    #languages,
-    #source {
-        width: 50%;
-        cursor: pointer;
-    }
-</style>
-
 <body>
-    <div id="mySidenav" class="sidenav">
-        <h3>NativeStreams</h3>
-        <hr>
-        <div>
-            <span>Languages</span>
-            <select id="languages" name="languages">
-            </select>
-        </div>
-        <div>
-            <span>Clear</span>
-            <button class="cachebtn">All</button>
-        </div>
-        <div>
-            <span>Source</span>
-            <button class="cachebtn"><a href="#sourcebox" data-reveal-id="sourceitem">Control</a></button>
-        </div>
-        <div>
-            <span>Version</span>
-            <label class="switch" style="cursor: pointer;"><a href="#logbox" data-reveal-id="logboxitem" style="color:#fff">1.0.0</a></label>
-        </div>
-        <div>
-            <span>About</span>
-            <label class="switch" style="cursor: pointer;"><a href="#infobox" data-reveal-id="infoboxitem" style="color:#fff">About this app.</a></label>
-        </div>
-    </div>
-    <div id="main">
-        <span style="cursor:pointer"><img src="images/menuicon.png"></span>
-    </div>
-    <div id="popupbox">
-        <div id="chooseitem" class="reveal-modal">
-            <a href="#" class="close-reveal-modal">×</a>
-            <h2>Select</h2>
-            <div id="selectform">
-                <input type="radio" name="radioName" value="1" checked/> <span>Contries</span> <br />
-                <input type="radio" name="radioName" value="2" /> <span>Languages</span> <br />
-                <input type="radio" name="radioName" value="3" /> <span>Category</span> <br />
-            </div>
-            <button class="stylebtn">GO!</button>
-        </div>
-    </div>
-    <div id="sourcebox">
-        <div id="sourceitem" class="source-modal">
-            <a href="#" class="close-source-modal">×</a>
-            <h2>Select</h2>
-            <div id="selectform">
-                <input type="radio" name="sourceName" value="1" checked/> <span>Moive</span> <br />
-                <input type="radio" name="sourceName" value="2" /> <span>Novel</span> <br />
-                <input type="radio" name="sourceName" value="3" /> <span>Manga</span> <br />
-                <input type="radio" name="sourceName" value="4" /> <span>Music</span> <br />
-            </div>
-            <button class="stylebtn" onclick="goToSource()"><img src="./images/nextselect.svg" style="width:30px;"></button>
-        </div>
-    </div>
-    <div id="logbox">
-        <div id="logboxitem" class="log-modal">
-            <a href="#" class="close-log-modal">×</a>
-            <div class="scrollidbar" style="text-align: left;">
-            </div>
-        </div>
-    </div>
-    <div id="infobox">
-        <div id="infoboxitem" class="log-modal">
-            <a href="#" class="close-log-modal">×</a>
-            <div class="scrollappbar" style="text-align: left;">
-                <p>NativeStreams v1.0.0</p>
-                <p>Based on Easy Web TV by zhangboheng.</p>
-                <p>Made into native client by n1gerianpr1nce.</p>
-            </div>
-        </div>
-    </div>
-    <div class="bodyCon08">
-        <div class="students">
-            <div id="four_flash">
-                <div class="flashBg">
-                    <ul class="mobile">
-                        <li>
-                            <img src="images/tv.svg" />
-                            <dd>
-                                <a href="#popupbox" data-reveal-id="chooseitem"><button class="stylebtn">TV</button></a>
-                            </dd>
-                            <p>Watch Live TV.</p>
-                        </li>
+<!-- partial:index.partial.html -->
+<div class="gradient"></div>
+<div class="text">
+  <h1>NativeStreams</h1>
+  <li>6000+ IPTV streams, all live.</li>
+  <li>10000+ Songs</li>
+  <li>Lots of books. </li>
+  <li>Lots of manga.</li>
+  <li>Some Games too.</li>
+  <p></p>
+  <p></p>
+  <p><b>Created by N1gerianPr1nce#0996</b></p>
+  <p></p>
+  <p></p>
+  <p>Download at <a href="https://github.com/odditorium/NativeStreams/releases">github releases</a></p>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
-                        <li>
-                            <img src="images/comprehensive.svg" />
-                            <dd>
-                                <a href="routes/comprehensive.html"><button class="stylebtn">Movies</button></a>
-                            </dd>
-                            <p>Watch some movies</p>
-                        </li>
-                        <li>
-                            <img src="images/radio.svg" />
-                            <dd>
-                                <a href="#popupbox" data-reveal-id="chooseitem"><button class="stylebtn">Radio</button></a>
-                            </dd>
-                            <p>Listen to the radio</p>
-                        </li>
-                        <li>
-                            <img src="images/reading.svg" />
-                            <dd>
-                                <a href="routes/novel.html"><button class="stylebtn">Books</button></a>
-                            </dd>
-                            <p>Read some proper books.</p>
-                        </li>
-                        <li>
-                            <img src="images/manga.svg" />
-                            <dd>
-                                <a href="routes/manga.html"><button class="stylebtn">Manga</button></a>
-                            </dd>
-                            <p>Read some manga, if thats what your into.</p>
-                        </li>
-                        <li>
-                            <img src="images/music.svg" />
-                            <dd>
-                                <a href="routes/music.html"><button class="stylebtn">Music</button></a>
-                            </dd>
-                            <p>Listen to some beats.</p>
-                        </li>
-                        <li>
-                            <img src="images/game.svg" />
-                            <dd>
-                                <a href="routes/game.html"><button class="stylebtn">Games</button></a>
-                            </dd>
-                            <p>Play some basic JS games</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/translator.js"></script>
 </body>
-
 </html>
